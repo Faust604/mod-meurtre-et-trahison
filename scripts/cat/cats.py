@@ -45,6 +45,7 @@ from scripts.cat_relations.inheritance2 import inheritance_db
 from scripts.cat_relations.relationship import Relationship, create_one_relationship
 from scripts.cat_relations.enums import RelType, RelTier, rel_type_tiers
 from scripts.clan_package.settings import get_clan_setting
+from scripts.cat.Political_Alignement import Political_Alignement
 
 from scripts.events_module.generate_events import GenerateEvents
 from scripts.game_structure import image_cache, constants, game
