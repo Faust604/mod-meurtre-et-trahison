@@ -136,6 +136,7 @@ class Cat:
         backstory: str,
         skills: CatSkills,
         personality: Personality,
+        alignement: Political_Alignement,
         mentorship: MentorshipDict,
         inheritance: InheritanceDict,
         affinity: AfterlifeAffinityDict,
@@ -200,6 +201,7 @@ class Cat:
         self.backstory = backstory
         self.skills = skills
         self.personality = personality
+        self.alignement= alignement
 
         # mentorship
         self.mentor = mentorship["mentor"]
