@@ -1,0 +1,101 @@
+{
+    "normal_alignement": {
+
+        "nihilistic":{
+            "faith": [0, 8], 
+            "openness": [0, 8],
+            "bellicism": [0, 8],
+            "stability_need":[0, 8]
+        },
+         "star_follower":{
+            "faith": [8, 16], 
+            "openness": [0, 8],
+            "bellicism": [0, 8],
+            "stability_need":[0, 8]
+        },
+        "star_follower_traditionalist":{
+            "faith": [8, 16], 
+            "openness": [0, 8],
+            "bellicism": [0, 8],
+            "stability_need":[8, 16]
+        },        
+        "fervent_star_follower":{
+            "faith": [8, 16], 
+            "openness": [0, 8],
+            "bellicism": [8, 16],
+            "stability_need":[0, 8]
+        },
+        "xenophobic_star_follower":{
+            "faith": [8, 16], 
+            "openness": [0, 8],
+            "bellicism": [8, 16],
+            "stability_need":[8, 16]
+        },
+        "welcoming_star_follower":{
+            "faith": [8, 16], 
+            "openness": [8, 16],
+            "bellicism": [0, 8],
+            "stability_need":[0, 8]
+        },
+        "pieu_star_follower":{
+            "faith": [8, 16], 
+            "openness": [8, 16],
+            "bellicism": [0, 8],
+            "stability_need":[8, 16]
+        },
+         "conviction_star_follower":{
+            "faith": [8, 16], 
+            "openness": [8, 16],
+            "bellicism": [8, 16],
+            "stability_need":[0, 8]
+        },
+         "clan_protective_star_follower":{
+            "faith": [8, 16], 
+            "openness": [8, 16],
+            "bellicism": [8, 16],
+            "stability_need":[8, 16]
+        },
+        "welcoming":{
+            "faith": [0, 8], 
+            "openness": [8, 16],
+            "bellicism": [0, 8],
+            "stability_need":[0, 8]
+        },
+        "welcoming_interventionist":{
+            "faith": [0, 8], 
+            "openness": [8, 16],
+            "bellicism": [8, 16],
+            "stability_need":[0, 8]
+        },
+        "welcoming_pacifist":{
+            "faith": [0, 8], 
+            "openness": [8, 16],
+            "bellicism": [0, 8],
+            "stability_need":[8, 16]
+        },
+        "interventionist":{
+            "faith": [0, 8], 
+            "openness": [8, 16],
+            "bellicism": [8, 16],
+            "stability_need":[8, 16]
+        },
+        "bellicist":{
+            "faith": [0, 8], 
+            "openness": [0, 8],
+            "bellicism": [8, 16],
+            "stability_need":[0, 8]
+        },
+        "defensive":{
+            "faith": [0, 8], 
+            "openness": [0, 8],
+            "bellicism": [8, 16],
+            "stability_need":[8, 16]
+        },
+        "immobilist":{
+            "faith": [0, 8], 
+            "openness": [0, 8],
+            "bellicism": [0, 8],
+            "stability_need":[8, 16]
+        }
+    }
+}
