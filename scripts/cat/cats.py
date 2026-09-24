@@ -682,6 +682,7 @@ class Cat:
                         Cat.fetch_cat(mentor).personality
                     )
                     affect_skills = self.skills.mentor_influence(Cat.fetch_cat(mentor))
+                    affect_alignement = self.alignement.mentor_influence(Cat.fetch_cat(mentor))
                     if affect_personality:
                         self.history.add_facet_mentor_influence(
                             mentor.ID,
@@ -1233,6 +1234,7 @@ class Cat:
             # Things to do if the age changes
             self.personality.facet_wobble(facet_max=2)
             self.pelt.rebuild_sprite = True
+            self.alignement.opinion_wobble()
 
         # reset next thought type
         self.assign_thought()
@@ -2157,6 +2159,7 @@ class Cat:
             backstory="",
             skills=None,
             personality=None,
+            alignement=None,
             mentorship={},
             inheritance=InheritanceDict(
                 parent1=cat_info["parent1"],
@@ -2455,6 +2458,8 @@ class Cat:
                 "moons": self.moons,
                 "trait": self.personality.trait,
                 "facets": self.personality.get_facet_string(),
+                "alignement": self.alignement.trait,
+                "opinion": self.alignement.get_opinion_string(),
                 "parent1": self.parent1,
                 "parent2": self.parent2,
                 "adoptive_parents": self.adoptive_parents,
