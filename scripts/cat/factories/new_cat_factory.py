@@ -16,6 +16,7 @@ from scripts.cat.factories.typed_dicts import (
 from scripts.cat.names import Name
 from scripts.cat.pelts import Pelt
 from scripts.cat.personality import Personality
+from scripts.cat.alignement import Alignement
 from scripts.cat.skills import CatSkills
 from scripts.cat.status import Status
 from scripts.game_structure import game, constants
@@ -84,6 +85,7 @@ class NewCatFactory(BaseCatFactory, ABC):
             ),
             "skills": skills,
             "personality": cls._get_random_personality(age),
+            "alignement": cls._get_random_alignement(),
             "mentorship": MentorshipDict(
                 mentor=None,
                 former_mentor=[],
@@ -252,8 +254,8 @@ class NewCatFactory(BaseCatFactory, ABC):
         if age.is_baby():
             return gender
 
-        trans_chance = cls.rng.randint(0, 50)
-        nb_chance = cls.rng.randint(0, 75)
+        trans_chance = cls.rng.randint(0, 40)
+        nb_chance = cls.rng.randint(0, 65)
 
         if nb_chance == 1:
             gender["genderalign"] = "nonbinary"
@@ -297,6 +299,11 @@ class NewCatFactory(BaseCatFactory, ABC):
     @abstractmethod
     def _get_random_personality(cls, age: CatAge):
         return Personality(kit_trait=age.is_baby())
+
+    @classmethod
+    @abstractmethod
+    def _get_random_alignement(cls):
+        return Alignement()
 
     @classmethod
     @abstractmethod
