@@ -65,6 +65,9 @@ TEMPERAMENT_DICTS = [
 facet_types = ["lawfulness", "sociability", "aggression", "stability"]
 facet_range = [0, 16]
 
+opinions_types = ["faithfullness", "openness2", "bellicism2", "stability_need2"]
+opinions_range = [0, 16]
+
 OUTSIDER_REPS = ("welcoming", "neutral", "hostile")
 OTHER_CLAN_REPS = ("ally", "neutral", "hostile")
 

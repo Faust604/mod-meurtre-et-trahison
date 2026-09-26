@@ -17,6 +17,7 @@ from scripts.cat.history import History
 from scripts.cat.names import Name
 from scripts.cat.pelts import Pelt
 from scripts.cat.personality import Personality
+from scripts.cat.Alignement import Alignement
 from scripts.cat.skills import CatSkills
 from scripts.cat.status import Status
 
@@ -113,6 +114,10 @@ class LoadCatFactory(BaseCatFactory):
                 kwargs.get("facets"),
                 kwargs["trait"],
                 CatAge.get_from_moons(kwargs["moons"]).is_baby(),
+            ),
+            "alignement": cls._build_alignement(
+                kwargs.get("opinion"),
+                kwargs["alignement"],
             ),
             "mentorship": mentorship,
             "inheritance": inheritance,
@@ -311,6 +316,11 @@ class LoadCatFactory(BaseCatFactory):
         else:
             print(f"WARNING: no facets found for cat ID: {cls.cat_id}")
             return Personality(trait=trait, kit_trait=is_kit_trait)
+
+    @classmethod
+    def _build_alignement(
+        
+    )
 
     @classmethod
     def _convert_skill_and_backstory(

@@ -51,6 +51,12 @@ class TestCatFactory(NewCatFactory):
         )
 
     @classmethod
+    def _get_random_alignement (cls):
+        return Alignement (
+            faith=8, openness=8, bellicism=8, stability_need=8
+        )
+
+    @classmethod
     def _get_random_experience(cls, age, moons: int) -> int:
         return 0
 

@@ -28,6 +28,7 @@ from scripts.housekeeping.version import SAVE_VERSION_NUMBER
 from scripts.game_structure import constants
 from scripts.game_structure import game
 from ..cat.personality import Personality
+from ..cat.Alignement import Alignement
 from ..cat.skills import CatSkills
 from ..cat_relations.cat_handle_funcs import (
     init_all_relationships,
