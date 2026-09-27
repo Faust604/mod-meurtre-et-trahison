@@ -12,6 +12,7 @@ from scripts.cat.cats import Cat
 from scripts.cat.enums import CatAge, CatRank, CatSocial, CatGroup
 from scripts.cat.names import Name
 from scripts.cat.status import Status
+from scripts.cat.Alignement import Alignement
 from scripts.clan import Clan
 from scripts.clan_package.clan_names import get_possible_clan_names
 from scripts.clan_package.settings import set_clan_setting, save_clan_settings

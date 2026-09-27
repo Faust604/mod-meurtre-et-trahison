@@ -1041,6 +1041,9 @@ class ProfileScreen(Screens):
         # NEWLINE ----------
         output += "\n"
 
+        #Alignement
+        output += i18n.t(f"cat.Alignement.{the_cat.Alignement}")
+
         # CAT SKILLS
         output += the_cat.skills.skill_string(
             is_adolescent=(the_cat.age == CatAge.ADOLESCENT)
