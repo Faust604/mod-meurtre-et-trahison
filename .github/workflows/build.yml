@@ -1,7 +1,7 @@
 name: PyInstaller build
 
 on:
-  push:
+  workflow_dispatch: 
     paths-ignore:
       - ".github/workflows/build-docs.yml"
       - "docs/**"
