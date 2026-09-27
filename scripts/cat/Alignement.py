@@ -28,7 +28,7 @@ class Alignement:
         malleabillity: int=None
 ):
 
-self._faith=0
+    self._faith=0
 self._openness=0
 self._bellicism=0
 self._stability_need=0
