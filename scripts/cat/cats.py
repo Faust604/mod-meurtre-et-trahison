@@ -1234,7 +1234,41 @@ class Cat:
             # Things to do if the age changes
             self.personality.facet_wobble(facet_max=2)
             self.pelt.rebuild_sprite = True
-            self.alignement.opinion_wobble()
+            if self.kit :
+                nw=1
+                w1=0
+                w2=0
+                w3=0
+                w4=0
+                a=[1,2,3,4,5]
+                p1=self.parent1
+                if p1.is_alive and not p1.is_exiled and not p1 is_other_clancat and not p1.is_outsider:
+                    w1=p1.conviction[0]
+                    w2=p1.conviction[1]
+                    w3=p1.conviction[2]
+                    w4=p1.condiction[3]
+                if p2.is_alive and not p1.is_exiled and not p1 is_other_clancat and not p1.is_outsider:
+                    nw+=1
+                    w1+=p2.conviction[0]/nw
+                    w2+=p2.conviction[1]/nw
+                    w3+=p2.conviction[2]/nw
+                    w4=p2.condiction[3]/nw
+                for i in self.adoptive_parents:
+                    nw+=1
+                    w1+=adoptive_parents[i].conviction[0]/nw
+                    w2+=p2.adoptive_parents[i]/nw
+                    w3+=p2.adoptive_parents[i]/nw
+                    w4=p2.adoptive_parents[i]/nw
+                o1=random.randint(a, weights=w1, w2, w3, w4, 5)
+                o2=random.randint(a, weights=w1, w2, w3, w4, 5)
+                while (o1==o2):
+                    o2=random.randint(a, weights=w1, w2, w3, w4, 5)
+            else:
+                o1=random.randint (1,5)
+                o2=random.randint(1,5)
+                while o1==o2:
+                    o2=random.randint(1,5)
+            self.alignement.opinion_wobble(o1, o2)
 
         # reset next thought type
         self.assign_thought()

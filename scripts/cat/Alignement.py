@@ -116,7 +116,7 @@ class Alignement:
     def get_opinion_string(self):
         return(
             f"{self.faith},{self.oppenness},{self.bellicism},{self.stability_need}"
-            f"{self.conviction[0]},{self.oppenness_conviction},{self.conviction[2]},{self.conviction[3]}"
+            f"{self.conviction[0]},{self.oppenness_conviction[1]},{self.conviction[2]},{self.conviction[3]}"
         )
 
 
@@ -272,12 +272,8 @@ class Alignement:
                 print("No possible alignement! Using 'nihilistic'")
                 self.trait = "nihilistic"
 
-        def opinion_wobble(self):
+        def opinion_wobble(self, o1, o2):
             """Makes a small adjustment to all the facets, and redetermines trait if needed."""
-            o1=randint(1,5)
-            o2=randint(1,5)
-            while o1==o2:
-                o2=randint(1,5)
             if (o1==1 or o2==1):
                 faith_max = abs(5-(conviction[0]//2))
                 self.faithfullness += randint(-faith_max, faith_max)
@@ -290,7 +286,7 @@ class Alignement:
             if (o1==2 or o2==2):
                 openness_max = abs(5-(conviction[1]//2))
                 self.openness += randint(-openness_max, openness_max)
-            choose_alignement()
+        choose_alignement()
 
         def mentor_influence(self, mentor_alignement: Alignement):
             """applies mentor influence after the pair go on a patrol together
@@ -320,14 +316,9 @@ class Alignement:
                     self[opinion_affected] -= amount_affected
                 return opinion_affected, amount_affected
             else:
-<<<<<<< HEAD
-                # This will only trigger if they have the same personality.
-                return None
-=======
                 self[opinion_affected] -= amount_affected
             return opinion_affected, amount_affected
         else:
             # This will only trigger if they have the same personality.
             return None
 
->>>>>>> 608f4bd8a8cfa48e2890a8ca5185677fa47e884f
