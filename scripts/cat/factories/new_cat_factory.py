@@ -300,7 +300,7 @@ class NewCatFactory(BaseCatFactory, ABC):
 
     @classmethod
     @abstractmethod
-    def _get_random_alignement():
+    def _get_random_alignement(cls):
         if 
         return Alignement()
 
