@@ -95,7 +95,7 @@ class Alignement:
     if malleability is not None:
         self._malleabillity=Alignement.reportmalleabillity
     else:
-    self._malleabillity=40-self._conviction[0]-self._conviction[1]-self._conviction[2]-self._conviction[3]
+        self._malleabillity=40-self._conviction[0]-self._conviction[1]-self._conviction[2]-self._conviction[3]
 
     if not self.alignement or self._is_alignement_valid():
         self.choose_alignement() 
