@@ -1242,6 +1242,7 @@ class Cat:
                 w4=0
                 a=[1,2,3,4,5]
                 p1=self.parent1
+                p2=self.parent2
                 if p1.is_alive and not p1.is_exiled and not p1.is_other_clancat and not p1.is_outsider:
                     w1=p1.conviction[0]
                     w2=p1.conviction[1]
