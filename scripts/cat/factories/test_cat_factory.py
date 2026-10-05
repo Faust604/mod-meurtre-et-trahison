@@ -1,6 +1,7 @@
 from scripts.cat.enums import CatAge
 from scripts.cat.factories.new_cat_factory import NewCatFactory
 from scripts.cat.personality import Personality
+from scripts.cat.Alignement import Alignement
 from scripts.cat.skills import CatSkills, SkillPath
 from scripts.cat.status import Status
 

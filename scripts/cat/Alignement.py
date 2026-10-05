@@ -317,7 +317,7 @@ class Alignement:
                 return opinion_affected, amount_affected
             else:
                 self[opinion_affected] -= amount_affected
-            return opinion_affected, amount_affected
+                return opinion_affected, amount_affected
             else:
             # This will only trigger if they have the same personality.
                 return None

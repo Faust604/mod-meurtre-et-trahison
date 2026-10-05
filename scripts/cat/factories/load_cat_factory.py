@@ -316,11 +316,7 @@ class LoadCatFactory(BaseCatFactory):
         else:
             print(f"WARNING: no facets found for cat ID: {cls.cat_id}")
             return Personality(trait=trait, kit_trait=is_kit_trait)
-
-    @classmethod
-    def _build_alignement(
-        
-    )
+    
 
     @classmethod
     def _convert_skill_and_backstory(

@@ -1234,7 +1234,7 @@ class Cat:
             # Things to do if the age changes
             self.personality.facet_wobble(facet_max=2)
             self.pelt.rebuild_sprite = True
-            if self.kit :
+            if self.status.KITTEN :
                 nw=1
                 w1=0
                 w2=0
@@ -1260,15 +1260,15 @@ class Cat:
                     w2+=p2.adoptive_parents[i]/nw
                     w3+=p2.adoptive_parents[i]/nw
                     w4=p2.adoptive_parents[i]/nw
-                o1=random.randint(a, weights=(w1, w2, w3, w4, 5))
-                o2=random.randint(a, weights=(w1, w2, w3, w4, 5))
+                o1=randint(a, weights=(w1, w2, w3, w4, 5))
+                o2=randint(a, weights=(w1, w2, w3, w4, 5))
                 while (o1==o2):
-                    o2=random.randint(a, weights=(w1, w2, w3, w4, 5))
+                    o2=randint(a, weights=(w1, w2, w3, w4, 5))
             else:
-                o1=random.randint (1,5)
-                o2=random.randint(1,5)
+                o1=randint (1,5)
+                o2=randint(1,5)
                 while o1==o2:
-                    o2=random.randint(1,5)
+                    o2=randint(1,5)
             self.alignement.opinion_wobble(o1, o2)
 
         # reset next thought type

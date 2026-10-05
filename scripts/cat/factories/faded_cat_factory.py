@@ -36,6 +36,7 @@ class FadedCatFactory(BaseCatFactory):
             backstory="",
             skills=None,
             personality=None,
+            alignement=None,
             mentorship={},
             inheritance=InheritanceDict(
                 parent1=kwargs["parent1"],

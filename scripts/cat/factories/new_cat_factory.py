@@ -85,7 +85,7 @@ class NewCatFactory(BaseCatFactory, ABC):
             ),
             "skills": skills,
             "personality": cls._get_random_personality(age),
-            "alignement" : cls._get_random_alignement()
+            "alignement" : cls._get_random_alignement(),
             "mentorship": MentorshipDict(
                 mentor=None,
                 former_mentor=[],
