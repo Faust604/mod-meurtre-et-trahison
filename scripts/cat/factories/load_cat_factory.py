@@ -17,7 +17,7 @@ from scripts.cat.history import History
 from scripts.cat.names import Name
 from scripts.cat.pelts import Pelt
 from scripts.cat.personality import Personality
-from scripts.cat.Alignement import Alignement
+from scripts.cat.alignement import Alignement
 from scripts.cat.skills import CatSkills
 from scripts.cat.status import Status
 
@@ -320,8 +320,7 @@ class LoadCatFactory(BaseCatFactory):
 
     @classmethod
     def _convert_skill_and_backstory(
-        cls, skill_dict, skill, backstory, rank, age
-    ) -> Tuple[CatSkills, str]:
+        cls, skill_dict, skill, backstory, rank, age) -> Tuple[CatSkills, str]:
         """
         Handle conversion of some *very old* skills & backstories
         :param skill_dict: modern skill dict

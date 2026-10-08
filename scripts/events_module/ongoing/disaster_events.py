@@ -6,6 +6,7 @@ from scripts.events_module.event_information import EventInformation
 from scripts.events_module.generate_events import GenerateEvents
 from scripts.game_structure import game
 from scripts.clan_package.get_clan_cats import find_alive_cats_with_rank
+from scripts.cat.alignement import Alignement
 
 
 # ---------------------------------------------------------------------------- #
